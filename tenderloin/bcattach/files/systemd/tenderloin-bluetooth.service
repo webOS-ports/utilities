@@ -1,0 +1,9 @@
+[Unit]
+Description=HP TouchPad Bluetooth initialization program
+
+[Service]
+Type=simple
+ExecStartPre=/usr/sbin/bcattach
+ExecStart=/usr/sbin/hciattach_awesome -n /dev/ttyHS0 bcsp
+StandardOutput=null
+StandardError=journal

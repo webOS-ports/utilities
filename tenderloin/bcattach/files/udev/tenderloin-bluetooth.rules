@@ -1,0 +1,3 @@
+SUBSYSTEM=="rfkill", ATTR{type}=="bluetooth", ACTION=="change", ATTR{state}=="1", RUN+="/bin/systemctl start tenderloin-bluetooth.service"
+SUBSYSTEM=="rfkill", ATTR{type}=="bluetooth", ACTION=="change", ATTR{state}=="0", RUN+="/bin/systemctl stop tenderloin-bluetooth.service" 
+
